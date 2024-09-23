@@ -1,4 +1,4 @@
 <x-layout>
     @slot('title'){{$title}}@endslot
-    <h3 class="test-xl">{{$content}}</h3>
+    <div>Welcome to my home page </div>
 </x-layout>
