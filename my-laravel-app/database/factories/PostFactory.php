@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use App\Models\User;
 class PostFactory extends Factory
 {
     /**
@@ -14,9 +14,9 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            "title" => "test",
-            "body" => "nik",
-            "author" => "test"
+            "title" => $this->faker->sentence(10),
+            "author_id" => User::factory(),
+            "body" => $this->faker->text(),
         ];
     }
 }

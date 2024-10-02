@@ -16,7 +16,7 @@ class CreatePosts extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('author');
+            $table->foreignId('author_id')->constrained('users');  // Single foreign key for 'users' table
             $table->string('body');
             $table->timestamps();
         });
